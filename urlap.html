@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapcsolatfelvétel</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container{
+            background: white;
+            padding: 35px;
+            width: 450px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        label{
+            font-weight: bold;
+            color: #444;
+        }
+
+        input,
+        select,
+        textarea{
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus{
+            border-color: #2575fc;
+            outline: none;
+            box-shadow: 0 0 8px rgba(37,117,252,0.4);
+        }
+
+        .radio-group,
+        .checkbox-group{
+            margin-bottom: 18px;
+        }
+
+        .radio-group input,
+        .checkbox-group input{
+            width: auto;
+            margin-right: 8px;
+        }
+
+        button{
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            transform: scale(1.03);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Kapcsolatfelvétel</h2>
+
+        <form id="testForm">
+
+            <label for="name">Név:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Telefonszám:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="password">Jelszó:</label>
+            <input type="password" id="password" name="password">
+
+            <div class="radio-group">
+                <label>Nem:</label><br><br>
+
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Férfi</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Nő</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Feliratkozás hírlevélre</label>
+            </div>
+
+            <label for="country">Ország:</label>
+            <select id="country" name="country">
+                <option value="HU">Magyarország</option>
+                <option value="US">USA</option>
+                <option value="DE">Németország</option>
+            </select>
+
+            <label for="birthdate">Születési dátum:</label>
+            <input type="date" id="birthdate" name="birthdate">
+
+            <label for="message">Üzenet:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit" id="submit">Küldés</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
